@@ -7,7 +7,7 @@ If a challenge is meant to have a handout, then that folder will also be found w
 
 ## Setup
 
-Each challenge has a `docker-compose.yml` that makes hosting the challenge and/or the handout extremely convenient! Simply follow the instructions below:
+Each challenge has a `docker-compose.yml` that makes hosting the challenge and/or the handout extremely convenient! Simply follow the instructions below and you're all set:
 ```bash
 cd CHALLENGE/src
 sudo docker compose up
