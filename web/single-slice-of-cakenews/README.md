@@ -1,6 +1,6 @@
 # Single Slice Of CakeNews
 
-**Difficulty:** Medium-Hard  
+**Difficulty:** Hard  
 **Author:** 0xjeppe  
 
 "Brunnerne" has recently acquired the hugely popular website `CakeNews.ctf` in an effort to expand their empire. Brunnerne has multiple companies and websites under its umbrella, and they all utilize the same single sign on-portal for authentication: `BrunnerneLogin.ctf`.
