@@ -1,5 +1,15 @@
 This is a collection of various Capture The Flag-challenges I have created.
 
+## Challenges
+
+### BrunnerCTF 2025
+- Baking Bad (web - easy)
+- Single Slice of CakeNews (web - hard)
+- Dat Overflow Dough (pwn - easy)
+
+### Erhvervsakademi Aarhus Introduction to Hacking 2024
+- Hack The Fundamentals (boot2root - beginner)
+
 ## Details
 Challenges are stored by category and each challenge has a `src`-folder with the files used to generate and/or host the challenge, and a `solution`-folder with a solve-script and short writeup. *Note: None of these folders are normally available for the solvers.*
 
@@ -12,5 +22,7 @@ Each challenge has a `docker-compose.yml` that makes hosting the challenge and/o
 cd CHALLENGE/src
 sudo docker compose up
 ```
+
+The `Hack The Fundamentals` boot2root-challenge has a slightly different - but also convenient - setup outlined in the `README` of that folder.
 
 
