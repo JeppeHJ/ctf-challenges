@@ -1,0 +1,31 @@
+# Ubuntu 24.04 LTS Server #1
+Vagrant.configure("2") do |config|
+    # If you have the eaaa base image, uncomment below
+    config.vm.box = "eaaa-base"
+
+    # Comment below 2 lines if you have the eaaa base image
+    #config.vm.box = "hashicorp-education/ubuntu-24-04"
+    #config.vm.box_version = "0.1.0"
+    
+    # Network settings - bridged to WiFi network
+    config.vm.network "public_network", ip: "10.160.0.120", bridge: "Wi-Fi"
+    
+    # Additional network interface for connecting to the secret server
+    config.vm.network "private_network", ip: "10.0.1.10", auto_config: true
+  
+    # Configure VM resources
+    config.vm.provider "virtualbox" do |vb|
+      vb.memory = "2048"
+      vb.cpus = 2
+      vb.name = "server1-ubuntu"
+    end
+  
+    # Provisioning scripts - keeping package installation for flexibility
+    config.vm.provision "shell", path: "provision/01_packages.sh"
+    config.vm.provision "shell", path: "provision/02_networking.sh"
+    config.vm.provision "shell", path: "provision/03_ftp.sh"
+    config.vm.provision "shell", path: "provision/04_web.sh"
+    config.vm.provision "shell", path: "provision/05_ssh.sh"
+    config.vm.provision "shell", path: "provision/06_firewall.sh"
+  end
+  

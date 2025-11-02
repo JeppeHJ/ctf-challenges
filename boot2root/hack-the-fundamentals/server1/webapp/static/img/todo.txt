@@ -1,0 +1,7 @@
+- Få lukket den der anonymous access til FTP-serveren
+- Få lukket den der file upload vulnerability, tænk hvis folk uploadede en reverse shell!
+- Få fjernet mine ssh-credentials fra /opt/credentials.txt
+- Få ændret så alle users ikke kan køre sudo
+- Få fjernet nmap fra serveren
+- Få implementeret en DMZ så webserveren ikke kan se vores hemmelige interne system
+- Få fjernet min root ssh nøgle til den superhemmelige server fra /root-folderen her på serveren

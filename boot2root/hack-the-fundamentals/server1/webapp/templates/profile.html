@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil - Erhvervsakademi Aarhus</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <img src="{{ url_for('static', filename='img/eaaa_logo.png') }}" alt="Erhvervsakademi Aarhus" class="logo">
+            </div>
+            <div class="user-info">
+                <span>Velkommen, {{ username }}</span>
+                <a href="{{ url_for('logout') }}" class="logout-button">Log ud</a>
+            </div>
+        </header>
+        
+        <main>
+            <h1>Din profil</h1>
+            
+            <!-- Flash Messages -->
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    {% for category, message in messages %}
+                    <div class="flash-message {{ category }}">
+                        {{ message }}
+                    </div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+            
+            <div class="profile-sections">
+                <div class="profile-sidebar">
+                    <div class="profile-image-container">
+                        <img src="{{ profile_image }}" alt="Profile Picture" class="profile-image">
+                        <div class="file-info">
+                            <p>Nuværende fil: <a href="{{ profile_image }}" target="_blank">{{ profile_image.split('/')[-1] }}</a></p>
+                        </div>
+                        <form action="{{ url_for('upload_file') }}" method="post" enctype="multipart/form-data" class="upload-form">
+                            <div class="file-upload-container">
+                                <label for="file" class="file-label">Vælg fil</label>
+                                <input type="file" name="file" id="file" class="file-input">
+                                <span class="selected-file-name"></span>
+                            </div>
+                            <button type="submit" class="upload-button">Upload New Picture</button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="profile-details">
+                    <div class="profile-card">
+                        <div class="profile-info">
+                            <h2>Brugeroplysninger</h2>
+                            <p><strong>Email:</strong> {{ username }}</p>
+                            <p><strong>Rolle:</strong> {{ role }}</p>
+                            <p><strong>Status:</strong> Aktiv</p>
+                        </div>
+                        
+                        <div class="system-info">
+                            <h2>Systemoplysninger</h2>
+                            <p><strong>FTP Adgang:</strong> Aktiv</p>
+                            <p><strong>Webadgang:</strong> Aktiv</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>&copy; {{ now.year }} Erhvervsakademi Aarhus</p>
+        </footer>
+    </div>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html> 
