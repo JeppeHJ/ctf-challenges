@@ -3,12 +3,12 @@ This is a collection of various Capture The Flag-challenges I have created.
 ## Challenges
 
 ### BrunnerCTF 2025
-- Baking Bad (web - easy)
-- Single Slice of CakeNews (web - hard)
-- Dat Overflow Dough (pwn - easy)
+- Baking Bad (web)
+- Single Slice of CakeNews (web)
+- Dat Overflow Dough (pwn)
 
 ### Erhvervsakademi Aarhus Introduction to Hacking 2024
-- Hack The Fundamentals (boot2root - beginner)
+- Hack The Fundamentals (boot2root)
 
 ## Details
 Challenges are stored by category and each challenge has a `src`-folder with the files used to generate and/or host the challenge, and a `solution`-folder with a solve-script and short writeup. *Note: None of these folders are normally available for the solvers.*
