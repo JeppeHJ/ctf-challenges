@@ -8,7 +8,7 @@ This is a collection of various Capture The Flag-challenges I have created.
 - [Dat Overflow Dough](https://github.com/JeppeHJ/ctf-challenges/tree/master/web/dat-overflow-dough) (pwn)
 
 ### Erhvervsakademi Aarhus Introduction to Hacking 2024
-- Hack The Fundamentals (boot2root)
+- [Hack The Fundamentals](https://github.com/JeppeHJ/ctf-challenges/tree/master/boot2root/hack-the-fundamentals) (boot2root)
 
 ## Details
 Challenges are stored by category and each challenge has a `src`-folder with the files used to generate and/or host the challenge, and a `solution`-folder with a solve-script and short writeup. *Note: None of these folders are normally available for the solvers.*
