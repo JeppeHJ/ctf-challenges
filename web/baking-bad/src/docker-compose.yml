@@ -1,0 +1,9 @@
+services:
+  bakingbad:
+    build: .
+    ports:
+      - "8000:80"
+    hostname: bakingbad
+    restart: unless-stopped
+    volumes:
+      - ./index.php:/var/www/bakingbad/index.php

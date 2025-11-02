@@ -1,0 +1,24 @@
+<div class="login-modal">
+    <button class="close" title="Luk">&times;</button>
+    <h2>Log in with BrunnerLogin</h2>
+    <p>BrunnerLogin gives you access to CakeNews and all other Brunner-owned services!</p>
+    <form id="cakeLoginForm" class="space-y-3">
+        <input type="email" name="email" placeholder="E-mail" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <div id="login-error" class="text-red-600 text-sm hidden"></div>
+        <div class="forgot"><a href="#">Forgot password?</a></div>
+        <button type="submit">Log in</button>
+    </form>
+    <script type="module" src="{{ url_for('static', filename='js/login.js') }}"></script>
+    <div class="register">
+        or, <a href="/register" id="login-register-link">Register here</a>
+    </div>
+    <div class="info">
+        BrunnerLogin - Shared login owned by Brunnerne
+    </div>
+    <div class="footer-links">
+        <a href="#">Help</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">About BrunnerLogin</a>
+    </div>
+</div>

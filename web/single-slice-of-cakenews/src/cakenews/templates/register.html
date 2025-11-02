@@ -1,0 +1,22 @@
+<div class="register-modal">
+    <button class="close" title="Luk">&times;</button>
+    <h2>Create BrunnerLogin account</h2>
+    <p>BrunnerLogin gives you access to CakeNews and all other BrunnerLogin services</p>
+    <form id="registerForm" class="space-y-3">
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <input type="password" name="password_confirmation" placeholder="Confirm password" required>
+        <button type="submit">Create profile</button>
+    </form>
+    <script type="module" src="{{ url_for('static', filename='js/register.js') }}"></script>
+    <div id="register-msg" class="text-sm mt-2"></div>
+    <div class="info">
+        BrunnerLogin - Shared login owned by Brunnerne
+    </div>
+    <div class="footer-links">
+        <a href="#">Help</a>
+        <a href="#">Terms of service</a>
+        <a href="#">About BrunnerLogin</a>
+    </div>
+</div>

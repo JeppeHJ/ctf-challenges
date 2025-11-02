@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block title %}BrunnerneLogin – Login{% endblock %}
+
+{% block content %}
+<!-- Login Form -->
+<main class="flex-grow flex items-start justify-center pt-12 pb-24">
+    <div class="w-full max-w-md bg-white shadow-md px-8 py-10">
+        <h2 class="text-xl font-semibold mb-6">Log in with BrunnerneLogin to access your content.</h2>
+        <form id="loginForm" class="space-y-4">
+            <input type="email" name="email" placeholder="E-mail" required class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none">
+            <input type="password" name="password" placeholder="Password" required class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none">
+            <div id="sso-error" class="text-red-600 text-sm hidden"></div>
+            <div class="flex items-center justify-between text-sm text-gray-600">
+                <label class="inline-flex items-center space-x-2">
+                    <input type="checkbox" class="form-checkbox h-4 w-4 text-cyan-600">
+                    <span>Remember me</span>
+                </label>
+                <a href="#" class="text-cyan-700 hover:underline">Forgot password</a>
+            </div>
+            <button type="submit" class="w-full bg-slate-700 text-white py-2 rounded flex items-center justify-center space-x-2">
+                <span>Log in with</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-cyan-300" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M12 2C7.03 2 3 6.03 3 11c0 3.94 2.84 7.19 6.58 7.87l-.46 3.47a.75.75 0 001.1.77L12 21.25l1.78 1.86a.75.75 0 001.1-.76l-.46-3.48A8 8 0 0021 11c0-4.97-4.03-9-9-9z" clip-rule="evenodd" /></svg>
+                <span class="font-bold">BRUNNERNELOGIN</span>
+            </button>
+        </form>
+    </div>
+</main>
+{% endblock %}
+
+{% block scripts %}
+<script type="module" src="{{ url_for('static', filename='js/login.js') }}"></script>
+{% endblock %}

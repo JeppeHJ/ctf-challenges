@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}BrunnerneLogin – Profile{% endblock %}
+
+{% block content %}
+<main class="flex-grow flex items-center justify-center py-16">
+    <div class="bg-white shadow p-8 rounded w-full max-w-md text-center space-y-4">
+        <h2 class="text-2xl font-semibold">Your profile</h2>
+        <p><strong>Email:</strong> <span id="sso-email"></span></p>
+    </div>
+</main>
+{% endblock %}
+
+{% block scripts %}
+<script type="module" src="{{ url_for('static', filename='js/profile.js') }}"></script>
+{% endblock %}

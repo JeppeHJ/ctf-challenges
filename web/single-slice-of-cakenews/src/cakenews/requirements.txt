@@ -1,0 +1,6 @@
+flask==2.0.1
+flask-cors==3.0.10
+werkzeug==2.0.1
+requests==2.31.0
+pyjwt==2.3.0
+bleach==5.0.1

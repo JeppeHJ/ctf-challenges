@@ -1,0 +1,29 @@
+services:
+  cakenews:
+    build:
+      context: ./cakenews
+      dockerfile: Dockerfile
+    ports:
+      - "1337:5000"
+    environment:
+      - FLASK_ENV=development
+
+  brunnernelogin:
+    build:
+      context: ./brunnernelogin
+      dockerfile: Dockerfile
+    ports:
+      - "1338:5000"
+    environment:
+      - FLASK_ENV=development
+
+  bots:
+    build:
+      context: ./bots
+      dockerfile: Dockerfile
+    depends_on:
+      - cakenews
+
+networks:
+  default:
+    driver: bridge

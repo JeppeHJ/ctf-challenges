@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}Profile - CakeNews{% endblock %}
+
+{% block content %}
+<div class="max-w-xl mx-auto py-12">
+    <h1 class="text-3xl font-bold mb-6">Your CakeNews Profile</h1>
+    <div class="bg-white shadow rounded-lg p-6 space-y-4">
+        <p><strong>CakeNews username:</strong> <span id="p-username"></span></p>
+        <p><strong>BrunnerneLogin e-mail:</strong> <span id="p-email"></span></p>
+        <p><strong>Role:</strong> <span id="p-role"></span></p>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script type="module" src="{{ url_for('static', filename='js/profile.js') }}"></script>
+{% endblock %}

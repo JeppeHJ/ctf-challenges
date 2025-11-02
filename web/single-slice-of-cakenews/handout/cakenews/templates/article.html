@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block title %}Article - CakeNews{% endblock %}
+
+{% block content %}
+    <!-- Main Content -->
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <!-- Article Content -->
+        <article class="bg-white rounded-lg shadow-sm overflow-hidden">
+            <!-- Article Image -->
+            <div class="relative h-96">
+                <img id="article-image" src="" alt="Article" class="w-full h-full object-cover">
+                <div class="absolute top-4 left-4"><span id="article-category" class="category-tag">NEWS</span></div>
+            </div>
+
+            <!-- Article Body -->
+            <div class="p-6">
+                <h1 id="article-title" class="text-3xl font-bold text-gray-900 mb-4"></h1>
+                <div class="flex items-center space-x-4 text-gray-600 mb-6"><span id="article-author"></span><span>•</span><span id="article-date"></span></div>
+                <div id="article-content" class="prose max-w-none text-gray-700 leading-relaxed"><!-- Article content here --></div>
+                <div id="report-buttons" class="mt-4"></div>
+
+                <!-- Comments -->
+                <div class="mt-8 pt-6 border-t border-gray-200">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Comments</h3>
+                    <div id="comment-form" class="mb-6"></div>
+                    <div id="comments-section"><!-- Comments will load here --></div>
+                </div>
+            </div>
+        </article>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    window.__ARTICLE_ID__ = {{ article_id }};
+</script>
+<script type="module" src="{{ url_for('static', filename='js/article.js') }}"></script>
+{% endblock %}

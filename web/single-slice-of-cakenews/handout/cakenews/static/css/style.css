@@ -1,0 +1,86 @@
+/* === Utility & common classes === */
+.gradient-overlay{background:linear-gradient(to top,rgba(0,0,0,.8) 0%,rgba(0,0,0,.4) 50%,rgba(0,0,0,0) 100%)}
+.play-icon{background:rgba(34,197,94,.9);backdrop-filter:blur(4px)}
+.category-tag{background:#22c55e;color:#fff;font-size:.75rem;font-weight:600;padding:.25rem .5rem;border-radius:.25rem}
+.live-tag{background:#ef4444;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.7}}
+
+/* === Modal overlay === */
+.modal-overlay{display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,.3);z-index:1000;align-items:center;justify-content:center}
+
+/* === Shared modal base === */
+.login-modal,.register-modal{background:#fff;max-width:370px;margin:40px auto;border-radius:12px;box-shadow:0 2px 16px rgba(0,0,0,.12);padding:32px 24px 24px;position:relative}
+.login-modal h2,.register-modal h2{margin-top:0;font-size:1.3em;font-weight:bold;text-align:center}
+.login-modal p,.register-modal p{text-align:center;color:#444;font-size:1em;margin-bottom:24px}
+.login-modal a,.register-modal a{color:#1a0dab;text-decoration:underline;font-size:.98em}
+.login-modal form,.register-modal form{display:flex;flex-direction:column;gap:12px}
+.login-modal input[type=email],.login-modal input[type=password],.register-modal input[type=text],.register-modal input[type=email],.register-modal input[type=password]{padding:12px;border:1px solid #ddd;border-radius:8px;font-size:1em}
+.login-modal .forgot{margin-bottom:12px;text-align:left}
+.login-modal button,.register-modal button{background:#6eea4a;color:#222;font-weight:bold;border:none;border-radius:24px;padding:14px 0;font-size:1.1em;cursor:pointer;margin-bottom:10px;transition:background .2s}
+.login-modal button:hover,.register-modal button:hover{background:#5ed13e}
+.login-modal .register,.register-modal .login-link{text-align:center;margin-top:8px}
+.login-modal .footer-links,.register-modal .footer-links{display:flex;justify-content:center;gap:18px;margin-top:24px;font-size:.95em}
+.login-modal .info,.register-modal .info{color:#888;font-size:.93em;text-align:center;margin-top:18px}
+.login-modal .close,.register-modal .close{position:absolute;top:16px;right:18px;font-size:1.3em;color:#888;cursor:pointer;border:none;background:none}
+
+/* === Register-specific === */
+
+/* === Shared component abstractions === */
+.comment-card {
+  background:#f9fafb; /* gray-50 */
+  border-radius:0.5rem; /* rounded-lg */
+  padding:1rem;       /* p-4 */
+  margin-bottom:1rem; /* mb-4 */
+}
+
+.news-item {
+  display:flex;
+  align-items:flex-start;
+  gap:1rem;           /* space-x-4 */
+  padding:1rem;       /* p-4 */
+  background:#ffffff; /* bg-white */
+  border-radius:0.5rem;
+  box-shadow:0 1px 2px rgba(0,0,0,.05); /* shadow-sm */
+  cursor:pointer;
+  transition:box-shadow .15s;
+}
+.news-item:hover{box-shadow:0 4px 6px rgba(0,0,0,.1);} /* hover:shadow-md */
+
+.most-read-item {
+  display:flex;
+  align-items:flex-start;
+  gap:0.75rem;        /* space-x-3 */
+  padding:0.5rem;     /* p-2 */
+  border-radius:0.25rem; /* rounded */
+  cursor:pointer;
+  transition:background-color .15s; /* transition-colors */
+}
+.most-read-item:hover{background:#f9fafb;} /* hover:bg-gray-50 */
+
+.btn-warning {
+  background:#d97706; /* amber-600-ish */
+  color:#ffffff;
+  padding:0.5rem 1rem;
+  border-radius:0.25rem;
+  transition:background-color .15s;
+}
+.btn-warning:hover{background:#b45309;} /* darker */
+
+.btn-danger {
+  background:#dc2626; /* red-600 */
+  color:#ffffff;
+  padding:0.5rem 1rem;
+  border-radius:0.25rem;
+  transition:background-color .15s;
+}
+.btn-danger:hover{background:#b91c1c;}
+
+.nav-link {
+  transition:color .15s;
+}
+.nav-link:hover{color:#86efac;} /* green-300 */
+
+
+.register-modal .checkbox-container{display:flex;align-items:flex-start;gap:8px;font-size:.9em;color:#444;cursor:pointer}
+.register-modal .checkbox-container input[type=checkbox]{margin-top:2px;width:16px;height:16px}
+.register-modal .privacy-link{text-align:center;margin-top:8px}

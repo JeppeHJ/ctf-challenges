@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %}BrunnerneLogin{% endblock %}
+
+{% block content %}
+<main class="flex-grow flex flex-col items-center text-center py-16">
+    <p class="text-lg mb-6">BrunnerneLogin gives you access to all Brunnerne digital services</p>
+    <!-- Partner icons -->
+    <div class="flex items-center justify-center gap-16 mt-8">
+        <img src="{{ url_for('static', filename='images/brunnerne-icon.webp') }}" alt="Brunnerne Icon" class="h-16">
+        <img src="{{ url_for('static', filename='images/cakenews-icon.png') }}" alt="CakeNews Icon" class="h-10">
+    </div>
+</main>
+{% endblock %}

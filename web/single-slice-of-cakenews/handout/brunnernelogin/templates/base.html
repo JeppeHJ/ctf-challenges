@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}BrunnerneLogin{% endblock %}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    {% block head_extra %}{% endblock %}
+</head>
+<body class="bg-gray-100 flex flex-col min-h-screen">
+    <!-- Top Bar -->
+    <header class="bg-slate-700 text-white">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+            <!-- Logo -->
+            <div class="flex items-center space-x-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-cyan-300" viewBox="0 0 24 24" fill="currentColor">
+                    <path fill-rule="evenodd" d="M12 2C7.03 2 3 6.03 3 11c0 3.94 2.84 7.19 6.58 7.87l-.46 3.47a.75.75 0 001.1.77L12 21.25l1.78 1.86a.75.75 0 001.1-.76l-.46-3.48A8 8 0 0021 11c0-4.97-4.03-9-9-9z" clip-rule="evenodd" />
+                </svg>
+                <h1 class="text-2xl font-bold">BRUNNERNE<span class="text-cyan-300">LOGIN</span></h1>
+            </div>
+            <!-- Nav Buttons -->
+            <div id="nav-actions" class="space-x-2">
+                <a href="/login" class="px-4 py-2 bg-white text-slate-700 rounded shadow">Login</a>
+                <a href="#" class="px-4 py-2 bg-cyan-600 text-white rounded">Create profile</a>
+            </div>
+        </div>
+    </header>
+
+    {% block content %}{% endblock %}
+
+    <!-- Footer -->
+    <footer class="bg-white py-6 border-t mt-auto">
+        <div class="max-w-4xl mx-auto flex flex-col items-center space-y-4 text-sm text-gray-600">
+            <div class="flex flex-wrap justify-center gap-8">
+                <a href="#">Help</a>
+                <a href="#">Terms of service</a>
+                <a href="#">Privacy policy</a>
+                <a href="#">About BrunnerneLogin</a>
+            </div>
+            <p class="text-gray-500">BrunnerneLogin – Shared login owned by Brunnerne</p>
+        </div>
+    </footer>
+
+    <script type="module" src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+    {% block scripts %}{% endblock %}
+</body>
+</html>

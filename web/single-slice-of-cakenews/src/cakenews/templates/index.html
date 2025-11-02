@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% block title %}CakeNews - Cake & Baking News{% endblock %}
+
+{% block content %}
+    <!-- Main Content -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
+            <!-- Main Content Area -->
+            <div class="lg:col-span-3">
+                <!-- Featured Articles -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+                    <div class="md:col-span-2">
+                        <div class="relative h-80 rounded-lg overflow-hidden">
+                            <img id="featured-image" src="" alt="Featured Article" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 gradient-overlay"></div>
+                            <div class="absolute bottom-0 left-0 right-0 p-4">
+                                <span id="featured-category" class="category-tag live-tag">LIVE</span>
+                                <h2 id="featured-title" class="text-white text-xl font-bold mt-2"></h2>
+                            </div>
+                            <div class="absolute bottom-4 right-4 play-icon w-12 h-12 rounded-full flex items-center justify-center">
+                                <i class="fas fa-play text-white"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="relative h-36 rounded-lg overflow-hidden">
+                            <img id="side-image-1" src="" alt="Side Article 1" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 gradient-overlay"></div>
+                            <div class="absolute bottom-0 left-0 right-0 p-3">
+                                <span id="side-category-1" class="category-tag">RECIPES</span>
+                                <h3 id="side-title-1" class="text-white text-sm font-bold mt-1"></h3>
+                            </div>
+                            <div class="absolute bottom-3 right-3 play-icon w-8 h-8 rounded-full flex items-center justify-center">
+                                <i class="fas fa-play text-white text-xs"></i>
+                            </div>
+                        </div>
+                        <div class="relative h-36 rounded-lg overflow-hidden">
+                            <img id="side-image-2" src="" alt="Side Article 2" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 gradient-overlay"></div>
+                            <div class="absolute bottom-0 left-0 right-0 p-3">
+                                <span id="side-category-2" class="category-tag">DEBATE</span>
+                                <h3 id="side-title-2" class="text-white text-sm font-bold mt-1"></h3>
+                            </div>
+                            <div class="absolute bottom-3 right-3 play-icon w-8 h-8 rounded-full flex items-center justify-center">
+                                <i class="fas fa-play text-white text-xs"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- News List -->
+                <div id="news-list" class="space-y-4"><!-- News items will be loaded here --></div>
+
+                <!-- Footer -->
+                <div class="flex justify-between items-center mt-8 pt-4 border-t border-gray-200">
+                    <span class="text-gray-600">Featured from CakeNews+</span>
+                    <a href="#" class="text-green-600 hover:text-green-700 font-medium">See all</a>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="lg:col-span-1">
+                <div class="bg-white rounded-lg shadow-sm p-6">
+                    <h3 class="text-lg font-bold mb-4">Most Read</h3>
+                    <div id="most-read-list" class="space-y-4"><!-- Most read items will be loaded here --></div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+
+{% endblock %}

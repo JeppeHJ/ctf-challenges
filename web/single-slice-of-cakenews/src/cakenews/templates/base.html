@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}CakeNews{% endblock %}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    {% block head_extra %}{% endblock %}
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-green-800 text-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="/" class="flex items-center space-x-2">
+                        <span class="text-2xl font-bold">Cake</span>
+                        <div class="w-6 h-6 bg-green-400 rounded-full flex items-center justify-center">
+                            <span class="text-green-800 font-bold text-sm">N</span>
+                        </div>
+                        <span class="text-2xl font-bold">ews</span>
+                    </a>
+                </div>
+
+                <!-- Navigation -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="nav-link">News</a>
+                    <a href="#" class="nav-link">Recipes</a>
+                    <a href="#" class="nav-link">TV</a>
+                    <a href="/profile" id="nav-profile" class="nav-link">Profile</a>
+                    <a href="#" id="nav-register" class="nav-link">Register</a>
+                    <a href="#" id="nav-login" class="nav-link">Login</a>
+                    <a href="#" id="nav-logout" class="nav-link" style="display:none">Logout</a>
+                </nav>
+
+                <!-- Icons -->
+                <div class="flex items-center space-x-4">
+                    <button class="nav-link"><i class="fas fa-play text-lg"></i></button>
+                    <button class="nav-link"><i class="fas fa-th-large text-lg"></i></button>
+                    <button class="nav-link"><i class="fas fa-search text-lg"></i></button>
+                    <button class="nav-link"><i class="fas fa-user text-lg"></i></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    {% block content %}{% endblock %}
+
+    <!-- Modal Overlays -->
+    <div id="login-overlay" class="modal-overlay">{% include 'login.html' %}</div>
+    <div id="register-overlay" class="modal-overlay">{% include 'register.html' %}</div>
+
+    <script type="module" src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+    {% block scripts %}{% endblock %}
+</body>
+</html>
