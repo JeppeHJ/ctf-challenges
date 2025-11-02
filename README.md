@@ -5,7 +5,7 @@ This is a collection of various Capture The Flag-challenges I have created.
 ### BrunnerCTF 2025
 - [Baking Bad](https://github.com/JeppeHJ/ctf-challenges/tree/master/web/baking-bad) (web)
 - [Single Slice of CakeNews](https://github.com/JeppeHJ/ctf-challenges/tree/master/web/single-slice-of-cakenews) (web)
-- [Dat Overflow Dough](https://github.com/JeppeHJ/ctf-challenges/tree/master/web/dat-overflow-dough) (pwn)
+- [Dat Overflow Dough](https://github.com/JeppeHJ/ctf-challenges/tree/master/pwn/dat-overflow-dough) (pwn)
 
 ### Erhvervsakademi Aarhus Introduction to Hacking 2024
 - [Hack The Fundamentals](https://github.com/JeppeHJ/ctf-challenges/tree/master/boot2root/hack-the-fundamentals) (boot2root)
