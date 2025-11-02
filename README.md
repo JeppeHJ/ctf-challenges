@@ -3,7 +3,7 @@ This is a collection of various Capture The Flag-challenges I have created.
 ## Challenges
 
 ### BrunnerCTF 2025
-- Baking Bad (web)
+- [Baking Bad](https://github.com/JeppeHJ/ctf-challenges/tree/master/web/baking-bad) (web)
 - Single Slice of CakeNews (web)
 - Dat Overflow Dough (pwn)
 
