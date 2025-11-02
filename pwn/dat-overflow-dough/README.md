@@ -1,7 +1,6 @@
 # Dat Overflow Dough
 
-**Difficulty:** Easy
-
+**Difficulty:** Easy  
 **Author:** 0xjeppe  
 
 Our new intern has only coded in memory safe languages, but we're trying to optimize, so he has been tasked with re-writing our dough recipe-application in C!
